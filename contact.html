@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dini Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #7b4397, #dc2430); /* Latar belakang gradasi ungu-merah */
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header, footer {
+            background-color: rgba(123, 67, 151, 0.9); /* Warna ungu transparan untuk header dan footer */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparan untuk tombol */
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background-color: #facc15; /* Warna kuning terang saat hover */
+            color: black;
+        }
+        .container {
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.2); /* Latar belakang container dengan transparansi */
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #facc15; /* Warna kuning terang untuk heading */
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #facc15; /* Warna kuning terang untuk label */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #facc15; /* Border kuning terang untuk input */
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        }
+        .button-container a {
+            background-color: #facc15;
+            color: black;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #d4a514;
+        }
+        footer {
+            text-align: center;
+            position: relative;
+            padding: 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dini Library</h1>
+    <nav>
+        <a href="index.html">Halaman Utama</a>
+        <a href="about.html">Profil</a>
+        <a href="contact.html">Umpan Balik</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Kontak Kami</h2>
+    <p>Kami sangat menghargai pendapat Anda! Jika Anda memiliki pertanyaan, masukan, atau ingin mempelajari lebih lanjut mengenai layanan kami, jangan ragu untuk menghubungi kami melalui formulir di bawah ini.</p>
+    
+    <form action="#" method="POST">
+        <label>Alamat Email:</label>
+        <input type="email" required>
+        
+        <label>Alamat Lengkap:</label>
+        <input type="text" required>
+        
+        <label>Pesan Anda:</label>
+        <textarea rows="4" required></textarea>
+        
+        <button type="submit">Kirim Pesan</button>
+    </form>
+</div>
+<br>
+<footer>
+    &copy; 2025 Dini Library
+</footer>
+
+</body>
+</html>
