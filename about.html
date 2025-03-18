@@ -1,23 +1,151 @@
-1<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dini Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #7b4397, #dc2430); /* Latar belakang gradasi ungu-merah */
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header, footer {
+            background-color: rgba(123, 67, 151, 0.9); /* Warna ungu transparan untuk header dan footer */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparan untuk tombol */
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background-color: #facc15; /* Warna kuning terang saat hover */
+            color: black;
+        }
+        .container {
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.2); /* Latar belakang container dengan transparansi */
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #facc15; /* Warna kuning terang untuk heading */
+            text-align: center;
+        }
+        h3 {
+            color: #facc15; /* Warna kuning terang untuk sub-heading */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #facc15; /* Border kuning untuk tabel */
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #7b4397; /* Warna ungu untuk header tabel */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f0fdf4; /* Background baris genap lebih terang */
+        }
+        footer {
+            border-radius: 20px 20px 0 0;
+            padding: 20px;
+            position: relative;
+        }
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Dini WulandariLibrary</h1>
-<h2>Saya Mahasiswa Program Studi Perpustakaan dan Sains Informasi</h2>
-<p>Web ini adalah pemenuhan tugas Mata Kuliah Pengembangan Web</p>
 
-<h4>Menu</h4>
-<ul>
-<li>
-<a href="aboutme.html">Tentang Saya</a>
-</li>
-<li>
-<a href="contactus.html">Kritik dan Saran</a>
-</li>
-</ul>
+<header>
+    <h1>Perpustakaan Digital</h1>
+    <nav>
+        <a href="index.html">Halaman Utama</a>
+        <a href="about.html">Profil</a>
+        <a href="contact.html">Umpan Balik</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Seputar Kami</h2>
+    <p>Dini Library adalah perpustakaan digital, sebuah inovasi yang memungkinkan siapa saja untuk mengakses berbagai koleksi buku, jurnal, dan referensi ilmiah secara daring, tanpa terhalang oleh ruang dan waktu. Kehadiran perpustakaan digital ini menjadikan proses pembelajaran dan literasi lebih inklusif serta efisien.</p>
+    
+    <h3>Informasi Pribadi</h3>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <td>Dini Wulandari</td>
+        </tr>
+        <tr>
+            <th>NIM</th>
+            <td>220709021</td>
+        </tr>
+        <tr>
+            <th>Program Studi</th>
+            <td>Perpustakaan dan Sains Informasi</td>
+        </tr>
+        <tr>
+            <th>Fakultas</th>
+            <td>Fakultas Ilmu Budaya</td>
+        </tr>
+              <tr>
+            <th>Universitas</th>
+            <td>Universitas Sumatera Utara</td>
+        </tr>
+        <tr>
+            <th>Semester</th>
+            <td>6</td>
+        </tr>
+        <tr>
+            <th>Tahun Ajaran</th>
+            <td>Genap 2024/2025</td>
+        </tr>
+    </table>
+</div>
+
+<footer>
+    &copy; 2025 Dini Library
+</footer>
+
 </body>
 </html>
