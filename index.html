@@ -1,56 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Dini Library</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            margin: 0;
+            padding: 0;
+            color: white;
         }
-        h1 {
-            color: #2c3e50;
+        header, footer {
+            background-color: rgba(139, 92, 246, 0.9);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #facc15;
+            color: black;
+        }
+        .container {
+            width: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         }
         h2 {
-            color: #34495e;
+            color: #facc15;
+            text-align: center;
         }
         p {
-            color: #555;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            display: inline;
-            margin: 10px;
-        }
-        a {
-            text-decoration: none;
+            text-align: justify;
             color: white;
-            background-color: #3498db;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #facc15;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #d4a514;
+        }
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .dark-mode .container {
+            background-color: #333;
+            color: white;
+        }
+        .dark-mode header, .dark-mode footer {
+            background-color: #6d28d9;
+        }
+        /* Dark Mode Button */
+        #darkModeToggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #facc15;
+            color: black;
+            border: none;
             padding: 10px 15px;
             border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
         }
-        a:hover {
-            background-color: #2980b9;
+        #darkModeToggle:hover {
+            background-color: #d4a514;
         }
     </style>
 </head>
 <body>
-    <h1>Dini Library</h1>
-    <h2>Saya Mahasiswa Program Studi Perpustakaan dan Sains Informasi</h2>
-    <p>Web ini adalah pemenuhan tugas Mata Kuliah Pengembangan Web</p>
 
-    <h4>Menu</h4>
-    <ul>
-        <li><a href="aboutme.html">Tentang Saya</a></li>
-        <li><a href="contactus.html">Kritik dan Saran</a></li>
-    </ul>
-    
-    <a href="https://library.usu.ac.id/">Perpustakaan USU</a>
+<header>
+    <h1>Dini Library</h1>
+    <nav>
+        <a href="index.html">Halaman Utama</a>
+        <a href="about.html">Profil</a>
+        <a href="contact.html">Umpan Balik</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Selamat Datang di Dini Library</h2>
+    <p>Halo! Saya <b>Dini Wulandari</b>.Saya merupakan mahasiswa Program Studi Perpustakaan dan Sains Informasi di Universitas Sumatera Utara. Website ini dibuat sebagai bagian dari tugas Mata Kuliah Pengembangan Web, yang bertujuan untuk melatih kemampuan dalam membangun dan mengelola sebuah situs web secara efektif.  
+
+Dalam proses pengembangan website ini, saya mempelajari berbagai elemen penting, seperti desain antarmuka, navigasi, serta fungsionalitas agar dapat memberikan pengalaman yang baik bagi pengguna. Selain sebagai tugas akademik, saya berharap website ini dapat menjadi sarana pembelajaran yang berguna dan terus berkembang di masa mendatang.</p>
+    <div class="button-container">
+        <a href="https://library.usu.ac.id/" target="_blank">Kunjungi Perpustakaan USU</a>
+    </div>
+</div>
+<footer>
+    &copy; 2025 Dini Library
+</footer>
+
 </body>
 </html>
+
