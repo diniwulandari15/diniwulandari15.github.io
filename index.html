@@ -146,45 +146,7 @@
 
 </body>
 </html>
-<?php
-$host = "localhost";
-$user = "root";        // ganti sesuai user MySQL
-$pass = "";            // ganti jika ada password
-$db   = "dini_library";
-
-// Koneksi ke database
-$conn = new mysqli($host, $user, $pass, $db);
-
-// Periksa koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
-
-// Ambil data dari form
-$nama  = $_POST['nama'];
-$email = $_POST['email'];
-$pesan = $_POST['pesan'];
-
-// Simpan ke tabel
-$sql = "INSERT INTO kontak (nama, email, pesan) VALUES ('$nama', '$email', '$pesan')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Data berhasil disimpan. <a href='hello_world.php'>Kembali</a>";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-?>
-CREATE DATABASE dini_library;
-
-USE dini_library;
-
-CREATE TABLE kontak (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nama VARCHAR(100),
-    email VARCHAR(100),
-    pesan TEXT,
-    waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
+       
+        
+        
+                
