@@ -1,126 +1,152 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dini Library</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #7b4397, #dc2430); /* Latar belakang gradasi ungu-merah */
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
-        header, footer {
-            background-color: rgba(123, 67, 151, 0.9); /* Warna ungu transparan untuk header dan footer */
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-        }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparan untuk tombol */
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        nav a:hover {
-            background-color: #facc15; /* Warna kuning terang saat hover */
-            color: black;
-        }
-        .container {
-            width: 50%;
-            background-color: rgba(255, 255, 255, 0.2); /* Latar belakang container dengan transparansi */
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            color: #facc15; /* Warna kuning terang untuk heading */
-            text-align: center;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-            color: #facc15; /* Warna kuning terang untuk label */
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #facc15; /* Border kuning terang untuk input */
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-        }
-        .button-container a {
-            background-color: #facc15;
-            color: black;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: all 0.3s;
-        }
-        .button-container a:hover {
-            background-color: #d4a514;
-        }
-        footer {
-            text-align: center;
-            position: relative;
-            padding: 15px;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dini Library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body>
 
-<header>
-    <h1>Dini Library</h1>
-    <nav>
-        <a href="index.html">Halaman Utama</a>
-        <a href="about.html">Profil</a>
-        <a href="contact.html">Umpan Balik</a>
-    </nav>
-</header>
+<body class="bg-gradient-to-b from-blue-100 via-white to-gray-100 text-gray-800 font-sans">
+  <!-- Header -->
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 bg-opacity-90 backdrop-blur-md shadow-xl transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <span class="text-3xl">📚</span>
+        <h1 class="text-xl sm:text-2xl font-extrabold tracking-wide text-white">
+          Dini Library
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm sm:text-base font-semibold tracking-wide">
+        <a href="index.html" class="text-white hover:text-yellow-300 transition duration-200">Home
+          <a href="about.html" class="text-white hover:text-yellow-300 transition duration-200">About
+            <a href="contact.html" class="text-white hover:text-yellow-300 transition duration-200">Feedback
+              <a href="Homework.html" class="text-white hover:text-yellow-300 transition duration-200">Homework</a>
+      </nav>
+      <!-- Toggle button for mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
+          ☰
+        </button>
+      </div>
+    </div>
 
-<div class="container">
-    <h2>Kontak Kami</h2>
-    <p>Kami sangat menghargai pendapat Anda! Jika Anda memiliki pertanyaan, masukan, atau ingin mempelajari lebih lanjut mengenai layanan kami, jangan ragu untuk menghubungi kami melalui formulir di bawah ini.</p>
-    
-    <form action="#" method="POST">
-        <label>Alamat Email:</label>
-        <input type="email" required>
-        
-        <label>Alamat Lengkap:</label>
-        <input type="text" required>
-        
-        <label>Pesan Anda:</label>
-        <textarea rows="4" required></textarea>
-        
-        <button type="submit">Kirim Pesan</button>
-    </form>
-</div>
-<br>
-<footer>
-    &copy; 2025 Dini Library
-</footer>
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
+      <nav class="flex flex-col space-y-2 text-white font-medium">
+        <a href="index.html" class="hover:text-yellow-300">Home</a>
+        <a href="about.html" class="hover:text-yellow-300">About</a>
+        <a href="contact.html" class="hover:text-yellow-300">Feedback</a>
+        <a href="hello.html" class="hover:text-yellow-300">Homework</a>
+      </nav>
+    </div>
 
-</body>
+    <script>
+      // Toggle mobile menu
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+    </script>
+  </header>
+
+    <!-- Konten Utama -->
+    <main class="pt-40 px-6 max-w-4xl mx-auto space-y-10">
+      <section class="bg-white p-8 rounded-xl shadow-md">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 text-center"
+        >
+          Kontak Kami
+        </h2>
+        <p class="mb-6 text-gray-700 text-justify">
+          Kami sangat menghargai pendapat Anda! Jika Anda memiliki pertanyaan,
+          masukan, atau ingin mempelajari lebih lanjut mengenai layanan kami,
+          jangan ragu untuk menghubungi kami melalui formulir di bawah ini.
+        </p>
+
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1"
+              >Alamat Email:</label
+            >
+            <input
+              type="email"
+              required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1"
+              >Alamat Lengkap:</label
+            >
+            <input
+              type="text"
+              required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1">Pesan Anda:</label>
+            <textarea
+              rows="4"
+              required
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-blue-700 text-white py-2 px-6 rounded-md shadow hover:bg-blue-800 transition duration-300"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-6 mt-16">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="text-center md:text-left text-sm">
+          &copy; 2025 Dini Library. Semua Hak Dilindungi.
+        </p>
+        <div
+          id="clock"
+          class="mt-2 md:mt-0 font-mono text-sm text-yellow-300"
+        ></div>
+      </div>
+    </footer>
+
+    <!-- Script: Toggle Menu & Clock -->
+    <script>
+      // Toggle mobile menu
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Real-time clock
+      function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        document.getElementById("clock").textContent = "⏰ " + timeString;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </body>
 </html>
