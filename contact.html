@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dini Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dini Library</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
+  <body
+    class="bg-gradient-to-b from-blue-100 via-white to-gray-100 text-gray-800 font-sans"
+  >
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 bg-opacity-90 backdrop-blur-md shadow-xl transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-3">
+          <span class="text-3xl">📚</span>
+          <h1
+            class="text-xl sm:text-2xl font-extrabold tracking-wide text-white"
+          >
+            Dini Library
+          </h1>
+        </div>
+        <nav
+          class="hidden md:flex space-x-6 text-sm sm:text-base font-semibold tracking-wide"
+        >
+          <a
+            href="index.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >Feedback</a
+          >
+          <a
+            href="Homework.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >Homework</a
+          >
+        </nav>
 
-<body class="bg-gradient-to-b from-blue-100 via-white to-gray-100 text-gray-800 font-sans">
-  <!-- Header -->
-  <header
-    class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 bg-opacity-90 backdrop-blur-md shadow-xl transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <span class="text-3xl">📚</span>
-        <h1 class="text-xl sm:text-2xl font-extrabold tracking-wide text-white">
-          Dini Library
-        </h1>
+        <!-- Toggle button for mobile -->
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="text-white focus:outline-none text-2xl"
+          >
+            ☰
+          </button>
+        </div>
       </div>
-      <nav class="hidden md:flex space-x-6 text-sm sm:text-base font-semibold tracking-wide">
-        <a href="index.html" class="text-white hover:text-yellow-300 transition duration-200">Home
-          <a href="about.html" class="text-white hover:text-yellow-300 transition duration-200">About
-            <a href="contact.html" class="text-white hover:text-yellow-300 transition duration-200">Feedback
-              <a href="Homework.html" class="text-white hover:text-yellow-300 transition duration-200">Homework</a>
-      </nav>
-      <!-- Toggle button for mobile -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
-          ☰
-        </button>
+
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
+        <nav class="flex flex-col space-y-2 text-white font-medium">
+          <a href="index.html" class="hover:text-yellow-300">Home</a>
+          <a href="about.html" class="hover:text-yellow-300">About</a>
+          <a href="contact.html" class="hover:text-yellow-300">Feedback</a>
+          <a href="Homework.html" class="hover:text-yellow-300">Homework</a>
+        </nav>
       </div>
-    </div>
-
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
-      <nav class="flex flex-col space-y-2 text-white font-medium">
-        <a href="index.html" class="hover:text-yellow-300">Home</a>
-        <a href="about.html" class="hover:text-yellow-300">About</a>
-        <a href="contact.html" class="hover:text-yellow-300">Feedback</a>
-        <a href="Homework.html" class="hover:text-yellow-300">Homework</a>
-      </nav>
-    </div>
-
-    <script>
-      // Toggle mobile menu
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          menu.classList.toggle("hidden");
-        });
-    </script>
-  </header>
+    </header>
 
     <!-- Konten Utama -->
     <main class="pt-40 px-6 max-w-4xl mx-auto space-y-10">
@@ -132,12 +150,15 @@
 
     <!-- Script: Toggle Menu & Clock -->
     <script>
-      // Toggle mobile menu
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          document.getElementById("mobile-menu").classList.toggle("hidden");
+      // Pastikan DOM sudah siap
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        toggleButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
         });
+      });
 
       // Real-time clock
       function updateClock() {
