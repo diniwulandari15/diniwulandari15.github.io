@@ -1,114 +1,515 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dini Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dini Library</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-
-<body class="bg-gradient-to-b from-blue-100 via-white to-gray-100 text-gray-800 font-sans">
-  <!-- Header -->
-  <header
-    class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 bg-opacity-90 backdrop-blur-md shadow-xl transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <span class="text-3xl">📚</span>
-        <h1 class="text-xl sm:text-2xl font-extrabold tracking-wide text-white">
-          Dini Library
-        </h1>
+  <body
+    class="bg-purple-50 text-purple-900 dark:bg-indigo-950 dark:text-purple-100 transition-colors duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 bg-opacity-90 backdrop-blur-md shadow-xl transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-3">
+          <span class="text-3xl">📚</span>
+          <h1
+            class="text-xl sm:text-2xl font-extrabold tracking-wide text-white"
+          >
+            Dini Library
+          </h1>
+        </div>
+        <nav
+          class="hidden md:flex space-x-6 text-sm sm:text-base font-semibold tracking-wide"
+        >
+          <a
+            href="index.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >Feedback</a
+          >
+          <a
+            href="Homework.html"
+            class="text-white hover:text-yellow-300 transition duration-200"
+            >Homework</a
+          >
+        </nav>
+        <!-- Toggle button for mobile -->
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="text-white focus:outline-none text-2xl"
+          >
+            ☰
+          </button>
+        </div>
       </div>
-      <nav class="hidden md:flex space-x-6 text-sm sm:text-base font-semibold tracking-wide">
-        <a href="index.html" class="text-white hover:text-yellow-300 transition duration-200">Home
-          <a href="about.html" class="text-white hover:text-yellow-300 transition duration-200">About
-            <a href="contact.html" class="text-white hover:text-yellow-300 transition duration-200">Feedback
-              <a href="Homework.html" class="text-white hover:text-yellow-300 transition duration-200">Homework</a>
-      </nav>
-      <!-- Toggle button for mobile -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
-          ☰
-        </button>
-      </div>
-    </div>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
-      <nav class="flex flex-col space-y-2 text-white font-medium">
-        <a href="index.html" class="hover:text-yellow-300">Home</a>
-        <a href="about.html" class="hover:text-yellow-300">About</a>
-        <a href="contact.html" class="hover:text-yellow-300">Feedback</a>
-        <a href="Homework.html" class="hover:text-yellow-300">Homework</a>
-      </nav>
-    </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
+        <nav class="flex flex-col space-y-2 text-white font-medium">
+          <a href="index.html" class="hover:text-yellow-300">Home</a>
+          <a href="about.html" class="hover:text-yellow-300">About</a>
+          <a href="contact.html" class="hover:text-yellow-300">Feedback</a>
+          <a href="Homework.html" class="hover:text-yellow-300">Homework</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-blue-50 via-blue-100 to-white shadow-lg pt-32 pb-16"
+      style="
+        background-image: url('https://perpustakaan.vokasi.unair.ac.id/wp-content/uploads/2023/09/Penerapan-Teknologi-Informasi-Perpustakaan-Untuk-Meningkatkan-Mutu-Layanan-Perpustakaan-sasikirana-z.webp');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <h2
+        class="text-4xl sm:text-5xl font-extrabold text-black mb-4 animate-fadeInUp"
+      >
+        Selamat Datang di <span class="text-blue-500">Dini Library</span>
+      </h2>
+      <p
+        class="max-w-3xl text-lg sm:text-xl text-black leading-relaxed mb-6 animate-fadeInUp delay-200"
+      >
+        Website ini dibuat oleh <strong>Dini Wulandari</strong>, mahasiswa Prodi
+        Perpustakaan dan Sains Informasi, Universitas Sumatera Utara sebagai
+        bagian dari tugas mata kuliah Pengembangan Web.
+      </p>
+      <a
+        href="https://library.usu.ac.id/"
+        target="_blank"
+        class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-110 hover:shadow-xl"
+      >
+        🔗 Kunjungi Perpustakaan USU
+      </a>
+    </section>
+
+    <!-- Search & Book Section -->
+    <main class="container mx-auto my-12 px-4">
+      <!-- Search Bar -->
+      <section class="mb-8 fade-in">
+        <div class="max-w-lg mx-auto">
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <svg
+                class="w-5 h-5 text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="book-search"
+              class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 p-2.5"
+              placeholder="Cari Buku Anda..."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-in px-4 py-8">
+        <h2
+          class="text-3xl font-bold mb-8 text-center text-black-900 dark:text-black-100"
+        >
+          Koleksi Buku Terbaru
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          <!-- The Little Prince -->
+          <!-- Atomic Habits -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1040/400/300"
+              alt="Atomic Habits"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Atomic Habits
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                James Clear
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- Becoming -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1011/400/300"
+              alt="Becoming"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Becoming
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Michelle Obama
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- Sapiens -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1050/400/300"
+              alt="Sapiens"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Sapiens
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Yuval Noah Harari
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- Educated -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1068/400/300"
+              alt="Educated"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Educated
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Tara Westover
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- Rich Dad Poor Dad -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1033/400/300"
+              alt="Rich Dad Poor Dad"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Rich Dad Poor Dad
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Robert T. Kiyosaki
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- Ikigai -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1024/400/300"
+              alt="Ikigai"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Ikigai
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Héctor García & Francesc Miralles
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- The Power of Now -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1003/400/300"
+              alt="The Power of Now"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                The Power of Now
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Eckhart Tolle
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+
+          <!-- Thinking, Fast and Slow -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="https://picsum.photos/id/1070/400/300"
+              alt="Thinking, Fast and Slow"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3
+                class="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2"
+              >
+                Thinking, Fast and Slow
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                Daniel Kahneman
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >Lihat Detail</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <main class="container mx-auto my-12 px-4">
+      <h1
+        class="text-3xl font-extrabold mb-6 text-center text-cyan-700 dark:text-purple-300"
+      >
+        Acara Mendatang
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Book Reading -->
+        <div
+          class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-xl transition duration-300 scroll-animate"
+        >
+          <h3
+            class="text-xl font-semibold text-cyan-600 dark:text-purple-200 mb-2"
+          >
+            Sesi Membaca Buku
+          </h3>
+          <p class="text-gray-700 dark:text-gray-400 text-sm mb-2">
+            📅 15 Juni 2025 | 10.00 - 12.00 WIB
+          </p>
+          <p class="text-gray-600 dark:text-gray-500 text-sm mb-3">
+            Ikuti sesi membaca buku bersama penulis lokal dan kisah-kisah
+            menarik.
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-cyan-600 hover:bg-cyan-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-xs"
+            >Pelajari Lebih Lanjut</a
+          >
+        </div>
+
+        <!-- Writing Workshop -->
+        <div
+          class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-xl transition duration-300 scroll-animate"
+        >
+          <h3
+            class="text-xl font-semibold text-cyan-600 dark:text-purple-200 mb-2"
+          >
+            Lokakarya Menulis
+          </h3>
+          <p class="text-gray-700 dark:text-gray-400 text-sm mb-2">
+            📅 10 Juli 2025 | 13.00 - 15.00 WIB
+          </p>
+          <p class="text-gray-600 dark:text-gray-500 text-sm mb-3">
+            Lokakarya praktis untuk mengasah keterampilan menulismu bersama
+            instruktur berpengalaman.
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-cyan-600 hover:bg-cyan-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-xs"
+            >Daftar Sekarang</a
+          >
+        </div>
+
+        <!-- Children's Storytime -->
+        <div
+          class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-xl transition duration-300 scroll-animate"
+        >
+          <h3
+            class="text-xl font-semibold text-cyan-600 dark:text-purple-200 mb-2"
+          >
+            Dongeng Anak
+          </h3>
+          <p class="text-gray-700 dark:text-gray-400 text-sm mb-2">
+            📅 5 Agustus 2025 | 15.00 - 16.00 WIB
+          </p>
+          <p class="text-gray-600 dark:text-gray-500 text-sm mb-3">
+            Ajak si kecil untuk menikmati dongeng seru dan sesi membaca
+            interaktif!
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-cyan-600 hover:bg-cyan-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-xs"
+            >Detail</a
+          >
+        </div>
+
+        <!-- Author Meet & Greet -->
+        <div
+          class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-xl transition duration-300 scroll-animate"
+        >
+          <h3
+            class="text-xl font-semibold text-cyan-600 dark:text-purple-200 mb-2"
+          >
+            Bertemu Penulis
+          </h3>
+          <p class="text-gray-700 dark:text-gray-400 text-sm mb-2">
+            📅 20 September 2025 | 14.00 - 16.00 WIB
+          </p>
+          <p class="text-gray-600 dark:text-gray-500 text-sm mb-3">
+            Temui penulis favoritmu, dapatkan buku bertanda tangan, dan ikuti
+            sesi tanya jawab.
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-cyan-600 hover:bg-cyan-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-xs"
+            >Info Selengkapnya</a
+          >
+        </div>
+      </div>
+    </main>
 
     <script>
-      // Toggle mobile menu
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          menu.classList.toggle("hidden");
-        });
+      // Add fade-in animation to the section content
+      const fadeInUpElements = document.querySelectorAll(".animate-fadeInUp");
+      fadeInUpElements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("opacity-100", "transform", "translate-y-0");
+        }, index * 300);
+      });
     </script>
-  </header>
 
-  <!-- Hero Section -->
-  <section
-  class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-blue-50 via-blue-100 to-white shadow-lg pt-32 pb-16"
-  style="background-image: url('https://perpustakaan.vokasi.unair.ac.id/wp-content/uploads/2023/09/Penerapan-Teknologi-Informasi-Perpustakaan-Untuk-Meningkatkan-Mutu-Layanan-Perpustakaan-sasikirana-z.webp'); background-size: cover; background-position: center;">
-  <h2 class="text-4xl sm:text-5xl font-extrabold text-black mb-4 animate-fadeInUp">
-    Selamat Datang di <span class="text-blue-500">Dini Library</span>
-  </h2>
-  <p class="max-w-3xl text-lg sm:text-xl text-black leading-relaxed mb-6 animate-fadeInUp delay-200">
-    Website ini dibuat oleh <strong>Dini Wulandari</strong>, mahasiswa Prodi
-    Perpustakaan dan Sains Informasi, Universitas Sumatera Utara sebagai
-    bagian dari tugas mata kuliah Pengembangan Web.
-  </p>
-  <a href="https://library.usu.ac.id/" target="_blank"
-    class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-110 hover:shadow-xl">
-    🔗 Kunjungi Perpustakaan USU
-  </a>
-</section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-6 mt-0">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="text-center md:text-left text-sm">
+          &copy; 2025 Dini Library. Semua Hak Dilindungi.
+        </p>
+        <div
+          id="clock"
+          class="mt-2 md:mt-0 font-mono text-sm text-yellow-300"
+        ></div>
+      </div>
+    </footer>
 
+    <!-- Clock Script -->
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        document.getElementById("clock").textContent = "⏰ " + timeString;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+    <script>
+      const searchInput = document.getElementById("book-search");
+      const books = document.querySelectorAll("section.fade-in .grid > div");
 
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
 
-  <script>
-    // Add fade-in animation to the section content
-    const fadeInUpElements = document.querySelectorAll(".animate-fadeInUp");
-    fadeInUpElements.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add("opacity-100", "transform", "translate-y-0");
-      }, index * 300);
-    });
-  </script>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-6 mt-0">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-center md:text-left text-sm">
-        &copy; 2025 Dini Library. Semua Hak Dilindungi.
-      </p>
-      <div id="clock" class="mt-2 md:mt-0 font-mono text-sm text-yellow-300"></div>
-    </div>
-  </footer>
-
-  <!-- Clock Script -->
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const timeString = now.toLocaleTimeString();
-      document.getElementById("clock").textContent = "⏰ " + timeString;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
-</body>
-
+        books.forEach((book) => {
+          const title = book.querySelector("h3").textContent.toLowerCase();
+          if (title.includes(query)) {
+            book.style.display = "";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
